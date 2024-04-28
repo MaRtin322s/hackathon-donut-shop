@@ -1,62 +1,48 @@
-class Stack<T> {
-    private items: T[];
-    private count: number;
-
+"use strict";
+class Stack {
+    items;
+    count;
     constructor() {
         this.items = [];
         this.count = 0;
     }
-
-    push(item: T): void {
+    push(item) {
         this.items.push(item);
         this.count++;
     }
-
-    pop(): T | undefined {
+    pop() {
         if (this.count === 0) {
             throw new Error('Stack is empty!');
         }
-
         this.count--;
         return this.items.pop();
     }
-
-    peek(): T | undefined {
+    peek() {
         if (this.count === 0) {
             throw new Error('Stack is empty!');
         }
-
         return this.items[this.count - 1];
     }
-
-    size(): number {
+    size() {
         return this.count;
     }
-
-    isEmpty(): boolean {
+    isEmpty() {
         return this.count === 0;
     }
-
-    clear(): void {
+    clear() {
         this.items = [];
         this.count = 0;
     }
 }
-
-const stack = new Stack<number>();
-
+const stack = new Stack();
 stack.push(10);
 stack.push(20);
 stack.push(30);
-
 console.log(stack.peek()); // Output: 30
 console.log(stack.size()); // Output: 3
-
 console.log(stack.pop()); // Output: 30
 console.log(stack.peek()); // Output: 20
 console.log(stack.size()); // Output: 2
-
 console.log(stack.isEmpty()); // Output: false
-
 stack.clear();
 console.log(stack.isEmpty()); // Output: true
