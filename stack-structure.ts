@@ -36,4 +36,9 @@ class Stack<T> {
     isEmpty(): boolean {
         return this.count === 0;
     }
+
+    clear(): void {
+        this.items = [];
+        this.count = 0;
+    }
 }
