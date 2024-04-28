@@ -28,4 +28,8 @@ class Stack<T> {
 
         return this.items[this.count - 1];
     }
+
+    size(): number {
+        return this.count;
+    }
 }
