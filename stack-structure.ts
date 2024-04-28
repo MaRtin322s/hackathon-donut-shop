@@ -32,4 +32,8 @@ class Stack<T> {
     size(): number {
         return this.count;
     }
+
+    isEmpty(): boolean {
+        return this.count === 0;
+    }
 }
