@@ -18,4 +18,12 @@ class ArrayList<T> {
 
         return this.items[this.count - 1 - index];
     }
+
+    set(index: number, value: T) {
+        if (index < 0 || index >= this.count) {
+            throw new RangeError('Index out of range');
+        }
+
+        this.items[this.count - 1 - index] = value;
+    }
 }
