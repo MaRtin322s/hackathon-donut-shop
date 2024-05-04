@@ -50,4 +50,12 @@ class ArrayList<T> {
 
         return removedItem;
     }
+
+    private resize(): void {
+        const newItems = new Array(this.items.length * 2);
+        for (let i = 0; i < this.items.length; i++) {
+            newItems[i] = this.items[i];
+        }
+        this.items = newItems;
+    }
 }
