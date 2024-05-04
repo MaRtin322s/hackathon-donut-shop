@@ -6,4 +6,8 @@ class ArrayList<T> {
         this.items = new Array(2);
         this.count = 0;
     }
+
+    get Count(): number {
+        return this.count;
+    }
 }
