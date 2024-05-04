@@ -34,8 +34,20 @@ class ArrayList<T> {
 
         this.items[this.count++] = item;
     }
-    
-    resize() {
-        throw new Error("Method not implemented.");
+
+    RemoveAt(index: number): T {
+        if (index < 0 || index >= this.count) {
+            throw new RangeError('Index out of range');
+        }
+
+        const removedItem = this.get(index);
+        this.shift(index);
+        this.count--;
+
+        if (this.count <= this.items.length / 4) {
+            this.shrink();
+        }
+
+        return removedItem;
     }
 }
