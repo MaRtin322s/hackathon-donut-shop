@@ -58,4 +58,12 @@ class ArrayList<T> {
         }
         this.items = newItems;
     }
+
+    private shrink(): void {
+        const newItems = new Array(this.items.length / 2);
+        for (let i = 0; i < this.count; i++) {
+            newItems[i] = this.items[i];
+        }
+        this.items = newItems;
+    }
 }
