@@ -66,4 +66,10 @@ class ArrayList<T> {
         }
         this.items = newItems;
     }
+
+    private shift(index: number): void {
+        for (let i = index; i < this.count - 1; i++) {
+            this.items[this.count - 1 - i] = this.items[this.count - 2 - i];
+        }
+    }
 }
