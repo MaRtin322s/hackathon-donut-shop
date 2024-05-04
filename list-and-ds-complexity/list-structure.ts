@@ -11,7 +11,7 @@ class ArrayList<T> {
         return this.count;
     }
 
-    get(index: number):T {
+    get(index: number): T {
         if (index < 0 || index >= this.count) {
             throw new RangeError('Index out of range');
         }
@@ -25,5 +25,17 @@ class ArrayList<T> {
         }
 
         this.items[this.count - 1 - index] = value;
+    }
+
+    Add(item: T): void {
+        if (this.count === this.items.length) {
+            this.resize()
+        }
+
+        this.items[this.count++] = item;
+    }
+    
+    resize() {
+        throw new Error("Method not implemented.");
     }
 }
