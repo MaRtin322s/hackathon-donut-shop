@@ -1,21 +1,19 @@
-class ArrayList<E> {
-    public arrayList: E[];
-
+"use strict";
+class ArrayList {
+    arrayList;
     constructor() {
         this.arrayList = [];
     }
-
-    add(element: E): boolean {
+    add(element) {
         if (element) {
             this.arrayList[this.arrayList.length] = element;
             return true;
-        } else {
+        }
+        else {
             return false;
         }
     }
 }
-
-let structure = new ArrayList<number>();
+let structure = new ArrayList();
 console.log(structure.add(1));
 console.log(structure);
-
