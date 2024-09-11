@@ -61,6 +61,10 @@ class ArrayList<E> {
     contains(element: E): boolean {
         return this.arrayList.includes(element) ? true : false;
     }
+
+    isEmpty(): boolean {
+        return this.arrayList.length === 0 ? true : false;
+    }
 }
 
 let arrayList = new ArrayList<number>();
