@@ -13,9 +13,20 @@ class ArrayList<E> {
             return false;
         }
     }
+
+    addByIndex(index: number, element: E): boolean {
+        if (index >= 0 && index <= this.arrayList.length) {
+            this.arrayList.splice(index, 0, element);
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
-let structure = new ArrayList<number>();
-console.log(structure.add(1));
-console.log(structure);
+let arrayList = new ArrayList<number>();
+console.log(arrayList.add(1));
+console.log(arrayList);
 
+console.log(arrayList.addByIndex(1, 5));
+console.log(arrayList);
