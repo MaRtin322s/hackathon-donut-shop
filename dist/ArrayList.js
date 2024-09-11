@@ -26,6 +26,19 @@ class ArrayList {
         if (index >= 0 && index <= this.arrayList.length) {
             return this.arrayList.at(index);
         }
+        else {
+            throw new RangeError('Index out of bounds exception!');
+        }
+    }
+    set(index, element) {
+        if (index >= 0 && index <= this.arrayList.length) {
+            let previousElement = this.arrayList.at(index);
+            this.arrayList[index] = element;
+            return previousElement;
+        }
+        else {
+            throw new RangeError('Index out of bounds exception!');
+        }
     }
 }
 let arrayList = new ArrayList();
@@ -34,3 +47,5 @@ console.log(arrayList);
 console.log(arrayList.addByIndex(1, 5));
 console.log(arrayList);
 console.log(arrayList.get(1));
+console.log(arrayList.set(2, 3));
+console.log(arrayList);
