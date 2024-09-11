@@ -57,6 +57,10 @@ class ArrayList<E> {
     indexOf(element: E): number {
         return this.arrayList.indexOf(element);
     }
+
+    contains(element: E): boolean {
+        return this.arrayList.includes(element) ? true : false;
+    }
 }
 
 let arrayList = new ArrayList<number>();
