@@ -53,6 +53,10 @@ class ArrayList<E> {
     size(): number {
         return this.arrayList.length;
     }
+
+    indexOf(element: E): number {
+        return this.arrayList.indexOf(element);
+    }
 }
 
 let arrayList = new ArrayList<number>();
@@ -67,6 +71,6 @@ console.log(arrayList.set(1, 2));
 console.log(arrayList);
 
 console.log(arrayList.remove(3));
-console.log(arrayList);
+console.log(arrayList.size());
 
 

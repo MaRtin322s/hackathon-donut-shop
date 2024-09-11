@@ -23,7 +23,7 @@ class ArrayList {
         }
     }
     get(index) {
-        if (index >= 0 && index <= this.arrayList.length) {
+        if (index >= 0 && index < this.arrayList.length) {
             return this.arrayList.at(index);
         }
         else {
@@ -49,6 +49,9 @@ class ArrayList {
             return -1;
         }
     }
+    size() {
+        return this.arrayList.length;
+    }
 }
 let arrayList = new ArrayList();
 console.log(arrayList.add(1));
@@ -56,7 +59,7 @@ console.log(arrayList);
 console.log(arrayList.addByIndex(1, 5));
 console.log(arrayList);
 console.log(arrayList.get(1));
-console.log(arrayList.set(2, 3));
+console.log(arrayList.set(1, 2));
 console.log(arrayList);
 console.log(arrayList.remove(3));
-console.log(arrayList);
+console.log(arrayList.size());
