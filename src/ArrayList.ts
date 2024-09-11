@@ -22,6 +22,12 @@ class ArrayList<E> {
             return false;
         }
     }
+
+    get(index: number): E | undefined {
+        if (index >= 0 && index <= this.arrayList.length) {
+            return this.arrayList.at(index);
+        }
+    }
 }
 
 let arrayList = new ArrayList<number>();
@@ -30,3 +36,5 @@ console.log(arrayList);
 
 console.log(arrayList.addByIndex(1, 5));
 console.log(arrayList);
+
+console.log(arrayList.get(1));

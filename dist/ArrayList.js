@@ -22,9 +22,15 @@ class ArrayList {
             return false;
         }
     }
+    get(index) {
+        if (index >= 0 && index <= this.arrayList.length) {
+            return this.arrayList.at(index);
+        }
+    }
 }
 let arrayList = new ArrayList();
 console.log(arrayList.add(1));
 console.log(arrayList);
 console.log(arrayList.addByIndex(1, 5));
 console.log(arrayList);
+console.log(arrayList.get(1));
