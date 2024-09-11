@@ -50,7 +50,9 @@ class ArrayList<E> {
         }
     }
 
-    
+    size(): number {
+        return this.arrayList.length;
+    }
 }
 
 let arrayList = new ArrayList<number>();
