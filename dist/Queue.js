@@ -1,15 +1,13 @@
-class Queue<E> {
-    public queue: E[];
-
+"use strict";
+class Queue {
+    queue;
     constructor() {
         this.queue = [];
     }
-
-    offer(element: E) {
+    offer(element) {
         this.queue.push(element);
     }
 }
-
-let queue = new Queue<number>();
+let queue = new Queue();
 queue.offer(1);
 console.log(queue);

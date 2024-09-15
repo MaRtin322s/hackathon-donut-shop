@@ -31,12 +31,3 @@ class Stack {
         return this.stack.length === 0 ? true : false;
     }
 }
-let stack = new Stack();
-stack.push('Pesho');
-stack.push('Mariyka');
-console.log(stack);
-stack.pop();
-console.log(stack);
-stack.push('Gosho');
-console.log(stack.peek());
-console.log(stack.isEmpty());
