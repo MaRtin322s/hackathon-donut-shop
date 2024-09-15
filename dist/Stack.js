@@ -24,6 +24,12 @@ class Stack {
             throw new RangeError('Stack is empty!');
         }
     }
+    size() {
+        return this.stack.length;
+    }
+    isEmpty() {
+        return this.stack.length === 0 ? true : false;
+    }
 }
 let stack = new Stack();
 stack.push('Pesho');
@@ -33,3 +39,4 @@ stack.pop();
 console.log(stack);
 stack.push('Gosho');
 console.log(stack.peek());
+console.log(stack.isEmpty());

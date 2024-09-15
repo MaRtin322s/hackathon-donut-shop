@@ -34,13 +34,3 @@ class Stack<E> {
         return this.stack.length === 0 ? true : false;
     }
 }
-
-let stack = new Stack<string>();
-stack.push('Pesho');
-stack.push('Mariyka');
-console.log(stack);
-stack.pop();
-console.log(stack);
-stack.push('Gosho');
-console.log(stack.peek());
-
