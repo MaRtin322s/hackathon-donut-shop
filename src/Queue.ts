@@ -24,6 +24,10 @@ class Queue<E> {
             return this.queue[0];
         }
     }
+
+    size(): number {
+        return this.queue.length;
+    }
 }
 
 let queue = new Queue<number>();
