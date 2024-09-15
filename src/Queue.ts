@@ -33,11 +33,3 @@ class Queue<E> {
         return this.queue.length === 0 ? true : false;
     }
 }
-
-let queue = new Queue<number>();
-queue.offer(1);
-console.log(queue);
-console.log(queue.poll());
-queue.offer(1);
-queue.offer(2);
-console.log(queue.peek());
