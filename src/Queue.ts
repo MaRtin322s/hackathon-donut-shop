@@ -28,6 +28,10 @@ class Queue<E> {
     size(): number {
         return this.queue.length;
     }
+
+    isEmpty(): boolean {
+        return this.queue.length === 0 ? true : false;
+    }
 }
 
 let queue = new Queue<number>();
