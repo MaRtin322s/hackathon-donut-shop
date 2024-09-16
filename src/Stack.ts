@@ -25,5 +25,18 @@ class Stack<E> {
             throw new RangeError('Stack is empty!');
         }
     }
+
+    size(): number {
+        return this.stack.length;
+    }
 }
+
+let stack = new Stack<string>();
+stack.push('Pesho');
+stack.push('Mariyka');
+console.log(stack);
+stack.pop();
+console.log(stack);
+stack.push('Gosho');
+console.log(stack.peek());
 
