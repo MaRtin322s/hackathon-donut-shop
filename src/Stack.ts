@@ -29,6 +29,10 @@ class Stack<E> {
     size(): number {
         return this.stack.length;
     }
+
+    isEmpty(): boolean {
+        return this.stack.length === 0 ? true : false;
+    }
 }
 
 let stack = new Stack<string>();
