@@ -66,19 +66,3 @@ class ArrayList<E> {
         return this.arrayList.length === 0 ? true : false;
     }
 }
-
-let arrayList = new ArrayList<number>();
-console.log(arrayList.add(1));
-console.log(arrayList);
-
-console.log(arrayList.addByIndex(1, 5));
-console.log(arrayList);
-
-console.log(arrayList.get(1));
-console.log(arrayList.set(1, 2));
-console.log(arrayList);
-
-console.log(arrayList.remove(3));
-console.log(arrayList.size());
-
-

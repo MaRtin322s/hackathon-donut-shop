@@ -52,14 +52,13 @@ class ArrayList {
     size() {
         return this.arrayList.length;
     }
+    indexOf(element) {
+        return this.arrayList.indexOf(element);
+    }
+    contains(element) {
+        return this.arrayList.includes(element) ? true : false;
+    }
+    isEmpty() {
+        return this.arrayList.length === 0 ? true : false;
+    }
 }
-let arrayList = new ArrayList();
-console.log(arrayList.add(1));
-console.log(arrayList);
-console.log(arrayList.addByIndex(1, 5));
-console.log(arrayList);
-console.log(arrayList.get(1));
-console.log(arrayList.set(1, 2));
-console.log(arrayList);
-console.log(arrayList.remove(3));
-console.log(arrayList.size());
