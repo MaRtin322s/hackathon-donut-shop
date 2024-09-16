@@ -5,6 +5,11 @@ class Stack<E> {
         this.stack = [];
     }
 
+    push(element: E): number {
+        this.stack.push(element);
+        return this.stack.length;
+    }
+
     
 }
 
