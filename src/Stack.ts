@@ -18,6 +18,12 @@ class Stack<E> {
         }
     }
 
-    
+    peek(): E | undefined {
+        if (this.stack.length > 0) {
+            return this.stack[this.stack.length - 1];
+        } else {
+            throw new RangeError('Stack is empty!');
+        }
+    }
 }
 
