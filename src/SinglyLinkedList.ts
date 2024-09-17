@@ -4,4 +4,8 @@ class SinglyLinkedList<E> {
     constructor() {
         this.list = [];
     }
+
+    size(): number {
+        return this.list.length;
+    }
 }
