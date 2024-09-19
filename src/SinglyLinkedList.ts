@@ -5,6 +5,10 @@ class SinglyLinkedList<E> {
         this.list = [];
     }
 
+    addFirst(element: E) {
+        return this.list.unshift(element);
+    }
+
     size(): number {
         return this.list.length;
     }
