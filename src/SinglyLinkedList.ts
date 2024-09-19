@@ -21,6 +21,14 @@ class SinglyLinkedList<E> {
         }
     }
 
+    removeLast(): E | undefined {
+        if (this.list.length === 0) {
+            throw new RangeError('List is empty!');
+        } else {
+            return this.list.pop();
+        }
+    }
+
     size(): number {
         return this.list.length;
     }
