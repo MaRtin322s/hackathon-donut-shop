@@ -37,6 +37,14 @@ class SinglyLinkedList<E> {
         }
     }
 
+    getLast(): E | undefined {
+        if (this.list.length === 0) {
+            throw new RangeError('List is empty!');
+        } else {
+            return this.list.at(-1);
+        }
+    }
+
     size(): number {
         return this.list.length;
     }
