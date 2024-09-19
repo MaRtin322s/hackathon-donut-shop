@@ -9,6 +9,10 @@ class SinglyLinkedList<E> {
         return this.list.unshift(element);
     }
 
+    addLast(element: E) {
+        return this.list.push(element);
+    }
+
     size(): number {
         return this.list.length;
     }
