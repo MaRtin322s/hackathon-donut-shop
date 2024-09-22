@@ -24,6 +24,10 @@ class FasterQueue<E> {
             return this.queue[0];
         }
     }
+
+    size(): number {
+        return this.queue.length;
+    }
 }
 
 let fasterQueue: FasterQueue<number> = new FasterQueue<number>();
