@@ -28,6 +28,10 @@ class FasterQueue<E> {
     size(): number {
         return this.queue.length;
     }
+
+    isEmpty(): boolean {
+        return this.queue.length === 0 ? true : false;
+    }
 }
 
 let fasterQueue: FasterQueue<number> = new FasterQueue<number>();
