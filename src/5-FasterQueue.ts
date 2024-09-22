@@ -16,6 +16,14 @@ class FasterQueue<E> {
             return this.queue.shift();
         }
     }
+
+    peek(): E | undefined {
+        if (this.queue.length === 0) {
+            throw new RangeError('Queue is empty!');
+        } else {
+            return this.queue[0];
+        }
+    }
 }
 
 let fasterQueue: FasterQueue<number> = new FasterQueue<number>();
