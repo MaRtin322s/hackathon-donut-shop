@@ -33,6 +33,3 @@ class FasterQueue<E> {
         return this.queue.length === 0 ? true : false;
     }
 }
-
-let fasterQueue: FasterQueue<number> = new FasterQueue<number>();
-console.log(fasterQueue.offer(1));
