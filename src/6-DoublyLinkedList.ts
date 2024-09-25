@@ -8,4 +8,8 @@ class DoublyLinkedList<E> {
     addFirst(element: E) {
         return this.list.unshift(element);
     }
+
+    addLast(element: E) {
+        return this.list.push(element);
+    }
 }
