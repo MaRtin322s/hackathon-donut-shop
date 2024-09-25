@@ -4,4 +4,8 @@ class DoublyLinkedList<E> {
     constructor() {
         this.list = [];
     }
+
+    addFirst(element: E) {
+        return this.list.unshift(element);
+    }
 }
