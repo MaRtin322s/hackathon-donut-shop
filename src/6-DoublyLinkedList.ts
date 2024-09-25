@@ -48,4 +48,8 @@ class DoublyLinkedList<E> {
     size(): number {
         return this.list.length;
     }
+
+    isEmpty(): boolean {
+        return this.list.length === 0 ? true : false;
+    }
 }
