@@ -44,4 +44,8 @@ class DoublyLinkedList<E> {
             return this.list.at(-1);
         }
     }
+
+    size(): number {
+        return this.list.length;
+    }
 }
