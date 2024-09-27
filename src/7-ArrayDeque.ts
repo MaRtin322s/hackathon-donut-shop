@@ -4,4 +4,8 @@ class ArrayDeque<T> {
     constructor() {
         this.arrayDeque = [];
     }
+
+    add(element: T): void {
+        this.arrayDeque.push(element);
+    }
 }
