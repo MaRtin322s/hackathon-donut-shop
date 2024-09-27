@@ -20,4 +20,8 @@ class ArrayDeque<T> {
     addLast(element: T): void {
         this.arrayDeque.push(element);
     }
+
+    push(element: T): void {
+        this.arrayDeque.push(element);
+    }
 }
