@@ -14,6 +14,10 @@ class ArrayDeque<T> {
     }
 
     addFirst(element: T): void {
+        this.arrayDeque.unshift(element);
+    }
+
+    addLast(element: T): void {
         this.arrayDeque.push(element);
     }
 }
