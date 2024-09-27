@@ -12,4 +12,8 @@ class ArrayDeque<T> {
     offer(element: T): void {
         this.arrayDeque.unshift(element);
     }
+
+    addFirst(element: T): void {
+        this.arrayDeque.push(element);
+    }
 }
