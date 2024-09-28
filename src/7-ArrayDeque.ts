@@ -61,4 +61,12 @@ class ArrayDeque<T> {
             return this.arrayDeque.shift();
         }
     }
+
+    pop(): T | undefined | null {
+        if (this.arrayDeque.length === 0) {
+            return null;
+        } else {
+            return this.arrayDeque.pop();
+        }
+    }
 }
