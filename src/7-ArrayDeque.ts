@@ -53,4 +53,12 @@ class ArrayDeque<T> {
             }
         }
     }
+
+    poll(): T | undefined | null {
+        if (this.arrayDeque.length === 0) {
+            return null;
+        } else {
+            return this.arrayDeque.shift();
+        }
+    }
 }
