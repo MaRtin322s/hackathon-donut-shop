@@ -42,4 +42,15 @@ class ArrayDeque<T> {
             throw new RangeError('Index out of bounds exception!');
         }
     }
+
+    peek(): { firstElement: T, lastElement: T} | null {
+        if (this.arrayDeque.length === 0) {
+            return null;
+        } else {
+            return {
+                firstElement: this.arrayDeque[0],
+                lastElement: this.arrayDeque[this.arrayDeque.length - 1]
+            }
+        }
+    }
 }
