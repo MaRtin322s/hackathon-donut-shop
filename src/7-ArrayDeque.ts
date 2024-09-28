@@ -24,4 +24,12 @@ class ArrayDeque<T> {
     push(element: T): void {
         this.arrayDeque.push(element);
     }
+
+    insert(index: number, element: T): void {
+        if (index >= 0 && index <= this.arrayDeque.length) {
+            this.arrayDeque.splice(index, 0, element);
+        } else {
+            throw new RangeError('Array Deque is empty!');
+        }
+    }
 }
