@@ -32,4 +32,14 @@ class ArrayDeque<T> {
             throw new RangeError('Array Deque is empty!');
         }
     }
+
+    set(index: number, element: T): T | undefined {
+        if (index >= 0 && index < this.arrayDeque.length) {
+            let previousElement = this.arrayDeque.at(index);
+            this.arrayDeque[index] = element;
+            return previousElement;
+        } else {
+            throw new RangeError('Index out of bounds exception!');
+        }
+    }
 }
