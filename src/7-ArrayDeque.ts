@@ -70,12 +70,22 @@ class ArrayDeque<T> {
         }
     }
 
-    get(index: number) {
+    getByIndex(index: number) {
         if (index >= 0 && index < this.arrayDeque.length) {
             let element = this.arrayDeque.at(index);
             return element;
         } else {
             throw new RangeError('Index out of bounds exception!');
+        }
+    }
+
+    getByElement(element: T) {
+        let foundElement = this.arrayDeque.find(x => x == element);
+
+        if (foundElement) {
+            return foundElement;
+        } else {
+            return null;
         }
     }
 }
