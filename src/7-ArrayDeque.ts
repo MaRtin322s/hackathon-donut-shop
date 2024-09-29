@@ -69,4 +69,13 @@ class ArrayDeque<T> {
             return this.arrayDeque.pop();
         }
     }
+
+    get(index: number) {
+        if (index >= 0 && index < this.arrayDeque.length) {
+            let element = this.arrayDeque.at(index);
+            return element;
+        } else {
+            throw new RangeError('Index out of bounds exception!');
+        }
+    }
 }
