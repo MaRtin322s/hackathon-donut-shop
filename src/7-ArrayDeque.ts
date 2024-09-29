@@ -88,4 +88,13 @@ class ArrayDeque<T> {
             return null;
         }
     }
+
+    remove(index: number): number {
+        if (index >= 0 && index < this.arrayDeque.length) {
+            this.arrayDeque.splice(index, 1);
+            return index;
+        } else {
+            throw new RangeError('Index out of bounds exception!');
+        }
+    }
 }
