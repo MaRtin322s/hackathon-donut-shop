@@ -43,7 +43,7 @@ class ArrayDeque<T> {
         }
     }
 
-    peek(): { firstElement: T, lastElement: T} | null {
+    peek(): { firstElement: T, lastElement: T } | null {
         if (this.arrayDeque.length === 0) {
             return null;
         } else {
@@ -89,12 +89,23 @@ class ArrayDeque<T> {
         }
     }
 
-    remove(index: number): number {
+    removeByIndex(index: number): number {
         if (index >= 0 && index < this.arrayDeque.length) {
             this.arrayDeque.splice(index, 1);
             return index;
         } else {
             throw new RangeError('Index out of bounds exception!');
+        }
+    }
+
+    remove(element: T) {
+        let foundElement = this.arrayDeque.find(x => x == element);
+
+        if (foundElement) {
+            let index = this.arrayDeque.indexOf(foundElement);
+            this.arrayDeque.splice(index, 1);
+        } else {
+            return null;
         }
     }
 }
