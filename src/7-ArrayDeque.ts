@@ -111,9 +111,17 @@ class ArrayDeque<T> {
 
     removeFirst(): T | undefined {
         if (this.arrayDeque.length === 0) {
-            throw new RangeError('List is empty!');
+            throw new RangeError('Array Deque is empty!');
         } else {
             return this.arrayDeque.shift();
+        }
+    }
+
+    removeLast(): T | undefined {
+        if (this.arrayDeque.length === 0) {
+            throw new RangeError('Array Deque is empty!');
+        } else {
+            return this.arrayDeque.pop();
         }
     }
 }
