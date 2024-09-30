@@ -108,4 +108,12 @@ class ArrayDeque<T> {
             return null;
         }
     }
+
+    removeFirst(): T | undefined {
+        if (this.arrayDeque.length === 0) {
+            throw new RangeError('List is empty!');
+        } else {
+            return this.arrayDeque.shift();
+        }
+    }
 }
