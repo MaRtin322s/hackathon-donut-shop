@@ -128,4 +128,8 @@ class ArrayDeque<T> {
     size(): number {
         return this.arrayDeque.length;
     }
+
+    isEmpty(): boolean {
+        return this.arrayDeque.length === 0 ? true : false;
+    }
 }
