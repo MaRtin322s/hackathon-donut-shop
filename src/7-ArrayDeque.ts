@@ -124,4 +124,8 @@ class ArrayDeque<T> {
             return this.arrayDeque.pop();
         }
     }
+
+    size(): number {
+        return this.arrayDeque.length;
+    }
 }
